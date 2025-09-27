@@ -19,7 +19,7 @@ doc = text_loader.load()
 
 #%% (4) Understand the document
 # Metadata
-doc[0].metadata
+print(doc[0].metadata)
 
 # %% Page content
-doc[0].page_content
+print(doc[0].page_content)

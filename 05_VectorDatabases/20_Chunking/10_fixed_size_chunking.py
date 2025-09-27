@@ -48,3 +48,4 @@ plt.xlabel("Number of characters")
 # add y-axis label
 plt.ylabel("Number of chunks")
 # %%
+plt.show()
