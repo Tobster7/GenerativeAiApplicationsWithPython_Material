@@ -34,6 +34,6 @@ chain = prompt | model
 res = chain.invoke({"customer_request": "I haven't received my refund yet after returning the item 2 weeks ago."})
 
 # %%
-res.model_dump()['content']
+print(res.model_dump()['content'])
 # %%
-from pyperclip import copy
+# from pyperclip import copy

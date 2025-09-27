@@ -18,7 +18,7 @@ def chain_of_thought_prompting(prompt: str, model_name: str = "gemma2-9b-it") ->
 
 
 # %% Self-Consistency CoT
-def self_consistency_cot(prompt: str, number_of_runs: int = 3) -> str:
+def self_consistency_cot(prompt: str, number_of_runs: int = 5) -> str:
     # run CoT multiple times
     res = []
     for _ in range(number_of_runs):

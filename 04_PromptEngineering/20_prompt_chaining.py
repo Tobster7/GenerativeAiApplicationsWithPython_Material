@@ -16,7 +16,7 @@ messages = [
 prompt = ChatPromptTemplate.from_messages(messages)
 chain = prompt | model
 output = chain.invoke({})
-output.content
+print(output.content)
 
 # %% next run
 messages.append(("ai", output.content))
@@ -24,6 +24,6 @@ messages.append(("user", "The dog is running after the cat."))
 prompt = ChatPromptTemplate.from_messages(messages)
 chain = prompt | model
 output = chain.invoke({})
-output.content
+print(output.content)
 
 # %%
