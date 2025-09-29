@@ -3,3 +3,4 @@
 cache.db
 agentops.log
 chroma.sqlite3
+.bin
