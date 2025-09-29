@@ -36,5 +36,5 @@ db = Chroma(persist_directory=persistent_db_path, embedding_function=embedding_f
 # %%
 db.add_documents(chunks)
 # %%
-len(db.get()['ids'])
+print(len(db.get()['ids']))
 # %%

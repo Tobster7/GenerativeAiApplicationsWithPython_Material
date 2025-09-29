@@ -20,7 +20,7 @@ db = Chroma(persist_directory=chroma_dir,
 # %%
 retriever = db.as_retriever()
 # %% find information
-# query = "Who is the sidekick of Sherlock Holmes in the book?"
+query = "Who is the sidekick of Sherlock Holmes in the book?"
 
 # # thematic search
 # query = "Find passages that describe the moor or its atmosphere."
