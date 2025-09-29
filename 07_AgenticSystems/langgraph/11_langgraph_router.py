@@ -8,6 +8,8 @@ from IPython.display import Image, display
 from rich.console import Console
 from rich.markdown import Markdown
 console = Console()
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv(usecwd=True))
 
 #%% LLM
 llm = ChatGroq(model="gemma2-9b-it")
@@ -62,7 +64,7 @@ graph = builder.compile()
 # Invoke the graph with a specific topic
 
 # %%
-display(Image(graph.get_graph().draw_mermaid_png()))
+# display(Image(graph.get_graph().draw_mermaid_png()))
 # %% Invokation
 initial_state = {"graph_state": {"topic": "Should dogs wear clothes?"}}
 result = graph.invoke(initial_state)

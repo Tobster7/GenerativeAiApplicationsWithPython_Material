@@ -27,17 +27,19 @@ agent_executor.invoke(
 def get_last_message(memory, config):
     return memory.get_tuple(config=config).checkpoint['channel_values']['messages'][-1].model_dump()['content']
 
+print(get_last_message(memory, config))
+
 #%% check whether the model can remember me
 agent_executor.invoke(
     {"messages": ("user", "What is my name and in which country do I live?")}, config
 )
-get_last_message(memory, config)
+print(get_last_message(memory, config))
 #%% check if it is possible to find me in the internet
 agent_executor.invoke(
     {"messages": ("user", "What can you find about me in the internet")},
     config
 )
-get_last_message(memory, config)
+print(get_last_message(memory, config))
 
 # %%
 list(memory.list(config=config))
